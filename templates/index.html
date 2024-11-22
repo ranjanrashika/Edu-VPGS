@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charsets="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Playlist Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Playlist Generator</h1>
+        <form method="POST" action="/recommend">
+            <label for="syllabus">Enter Syllabus Topics (one per line):</label>
+            <textarea name="syllabus" id="syllabus" rows="10" placeholder="Enter topics herre..."></textarea>
+            <button type="submit">Generate Playlist</button>
+        </form>
+
+        {% if recommendations %}
+        <h2>Recommended Playlist:</h2>
+        <ul>
+            {% for video in recommendations %}
+            <li>{{ video['Title'] }} ({{ video['Video ID'] }})</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
