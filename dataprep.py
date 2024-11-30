@@ -1,7 +1,7 @@
 #Data Preparation
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-df = pd.read_csv('"C:/Users/Rashika Ranjan/OneDrive/Desktop/DL-PROJECT/videos.csv"')
+df = pd.read_csv("C:/Users/Rashika Ranjan/OneDrive/Desktop/DL-PROJECT/videos.csv")
 print("Initial Data:")
 print(df.head())
 print("\nMissing Values:")
