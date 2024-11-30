@@ -4,7 +4,7 @@ from  model import get_video_recommendations
 
 app = Flask(__name__)
 
-dataset = pd.read_csv('data/videos.csv')
+dataset = pd.read_csv('C:\\Users\\Rashika Ranjan\\OneDrive\\Desktop\\DL-PROJECT\\videos.csv')
 @app.route('/')
 def home():
     """Render the homepage with a form."""
